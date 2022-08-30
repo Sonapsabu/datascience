@@ -1,0 +1,12 @@
+food=read.csv("food.csv")
+print(food)
+tomato=data.frame(ingredient="tomato",sweetness=6,
+crunchiness=4)
+print(tomato)
+food1=food[,2:3]
+print(food1)
+tomato1=tomato[,2:3]
+print(tomato1)
+library(class)
+pred=knn(food1,tomato1,food$FoodType,k=1)
+print(pred)
